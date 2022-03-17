@@ -1,8 +1,10 @@
-const NUM_ROWS = 4;
-const NUM_COLS = 4;
+const NUM_ROWS = 16;
+const NUM_COLS = 16;
 
 function createGrid(rows, cols) {
   const grid = document.querySelector(".grid");
+
+  let sideLength = 1000 / rows;
 
   for (let i = 0; i < rows; i++) {
     let row = document.createElement("div");
@@ -12,6 +14,8 @@ function createGrid(rows, cols) {
     for (let j = 0; j < cols; j++) {
       let box = document.createElement("div");
       box.classList.add("square");
+      box.style.cssText =
+        "height: " + sideLength + "px; width: " + sideLength + "px;";
       row.appendChild(box);
     }
   }
