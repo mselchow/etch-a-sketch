@@ -11,3 +11,7 @@
 .row {
   display: flex;
 }
+
+.black {
+  background-color: black;
+}

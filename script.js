@@ -16,6 +16,9 @@ function createGrid(rows, cols) {
       box.classList.add("square");
       box.style.cssText =
         "height: " + sideLength + "px; width: " + sideLength + "px;";
+      box.addEventListener("mouseenter", function (e) {
+        e.target.classList.add("black");
+      });
       row.appendChild(box);
     }
   }
