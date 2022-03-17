@@ -2,12 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid black;
+  height: min-content;
+  width: min-content;
+  margin: auto;
 }
 
 .row {
   display: flex;
-}
-
-.square {
-  border: 1px solid black;
 }
