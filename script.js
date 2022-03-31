@@ -1,9 +1,12 @@
 const NUM_ROWS = 16;
 const NUM_COLS = 16;
 const DIMENSIONS = 700;
+let currentSize = 16;
 
 function createGrid(rows, cols) {
   const grid = document.querySelector(".grid");
+
+  currentSize = rows;
 
   while (grid.firstChild) {
     grid.removeChild(grid.firstChild);
@@ -29,11 +32,18 @@ function createGrid(rows, cols) {
   }
 }
 
-function reset() {
+function resize() {
   let squaresPerSide = prompt("How many squares per side?");
   if (squaresPerSide !== null) {
     squaresPerSide = squaresPerSide > 100 ? 100 : squaresPerSide;
     createGrid(squaresPerSide, squaresPerSide);
+  }
+}
+
+function clear() {
+  let confirmReset = confirm("Are you sure you want to clear?");
+  if (confirmReset !== null) {
+    createGrid(currentSize, currentSize);
   }
 }
 
