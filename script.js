@@ -1,6 +1,6 @@
 const NUM_ROWS = 16;
 const NUM_COLS = 16;
-const DIMENSIONS = 1000;
+const DIMENSIONS = 700;
 
 function createGrid(rows, cols) {
   const grid = document.querySelector(".grid");
