@@ -9,8 +9,17 @@ button {
 
 .header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-bottom: 15px;
+  align-items: center;
+  margin: 15px 0px;
+  gap: 20px;
+}
+
+.title {
+  font-family: "Press Start 2P", cursive;
+  font-size: 54px;
+  color: red;
 }
 
 .grid {
