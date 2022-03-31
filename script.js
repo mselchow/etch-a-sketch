@@ -31,8 +31,10 @@ function createGrid(rows, cols) {
 
 function reset() {
   let squaresPerSide = prompt("How many squares per side?");
-  squaresPerSide = squaresPerSide > 100 ? 100 : squaresPerSide;
-  createGrid(squaresPerSide, squaresPerSide);
+  if (squaresPerSide !== null) {
+    squaresPerSide = squaresPerSide > 100 ? 100 : squaresPerSide;
+    createGrid(squaresPerSide, squaresPerSide);
+  }
 }
 
 createGrid(NUM_ROWS, NUM_COLS);
