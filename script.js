@@ -40,9 +40,8 @@ function resize() {
   }
 }
 
-function clear() {
-  let confirmReset = confirm("Are you sure you want to clear?");
-  if (confirmReset !== null) {
+function reset() {
+  if (confirm("Are you sure you want to clear?") == true) {
     createGrid(currentSize, currentSize);
   }
 }
